@@ -17,6 +17,7 @@ COPY --from=builder /books-test/public ./public
 COPY --from=builder /books-test/package.json ./package.json
 COPY --from=builder /books-test/.next ./.next
 COPY --from=builder /books-test/node_modules ./node_modules
+COPY --from=builder /books-test/next.config.js ./
 
 EXPOSE 3100
-CMD ["yarn", "start"]
+CMD ["yarn", "start", "-p", "3100"]
