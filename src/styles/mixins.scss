@@ -1,0 +1,14 @@
+$baseScreenSize: 1440;
+$mobileScreenSize: 360;
+
+@mixin desktop() {
+  @media only screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}

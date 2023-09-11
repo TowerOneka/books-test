@@ -1,0 +1,51 @@
+@import '@/styles/mixins';
+
+.root {
+  padding: 100px;
+
+  @include mobile {
+    padding: 40px;
+  }
+}
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.selectWrapper {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #ebebeb;
+  padding: 10px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
